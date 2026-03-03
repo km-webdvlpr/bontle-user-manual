@@ -82,19 +82,3 @@ sidebar.querySelectorAll("a").forEach((link) => {
     }
   });
 });
-
-document.querySelectorAll(".screenshot-image").forEach((img) => {
-  const box = img.closest(".screenshot-box");
-  if (!box) {
-    return;
-  }
-
-  const updateState = () => {
-    const loaded = img.complete && img.naturalWidth > 0;
-    box.classList.toggle("has-image", loaded);
-  };
-
-  img.addEventListener("load", updateState);
-  img.addEventListener("error", updateState);
-  updateState();
-});
