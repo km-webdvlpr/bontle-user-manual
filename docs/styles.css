@@ -79,7 +79,35 @@ body {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 24px;
+  padding-top: 30px;
   box-shadow: var(--shadow);
+  position: relative;
+}
+
+.hero-branding {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-logo {
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.asco-logo {
+  width: 128px;
+  height: 64px;
+}
+
+.benefit-logo {
+  width: 64px;
+  height: 64px;
 }
 
 .hero h1 {
@@ -288,6 +316,13 @@ input[type="search"]:focus {
 
   .hero {
     margin-top: 40px;
+    padding-top: 20px;
+  }
+
+  .hero-branding {
+    position: static;
+    justify-content: flex-end;
+    margin-bottom: 14px;
   }
 
   .section-body {
