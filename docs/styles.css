@@ -375,7 +375,8 @@ input[type="search"]:focus {
 
   .hero-branding {
     position: static;
-    justify-content: flex-end;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 14px;
   }
 
