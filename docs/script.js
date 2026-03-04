@@ -7,10 +7,11 @@ const backdrop = document.getElementById("backdrop");
 
 function getSectionCopyText(section) {
   const title = section.querySelector("h2")?.textContent?.trim() || "";
-  const steps = Array.from(section.querySelectorAll(".steps li"))
-    .map((li) => li.textContent.trim())
+  const steps = Array.from(section.querySelectorAll(".steps li, .steps p"))
+    .map((node) => node.textContent.trim())
+    .filter(Boolean)
     .join("\n");
-  return `${title}\n${steps}\nNotes:`;
+  return `${title}\n${steps}`;
 }
 
 function filterContent(query) {

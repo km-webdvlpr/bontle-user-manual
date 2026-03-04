@@ -253,6 +253,16 @@ input[type="search"]:focus {
   padding-left: 1.2rem;
 }
 
+.steps ul {
+  margin: 6px 0 10px;
+  padding-left: 1.2rem;
+}
+
+.steps .group-label {
+  margin: 8px 0 4px;
+  font-weight: 700;
+}
+
 .steps li {
   margin-bottom: 7px;
 }
