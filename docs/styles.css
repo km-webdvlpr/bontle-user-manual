@@ -283,6 +283,24 @@ input[type="search"]:focus {
   color: var(--text);
 }
 
+.further-reading {
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #171b21;
+  padding: 10px 12px;
+}
+
+.further-reading summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.further-reading[open] summary {
+  margin-bottom: 10px;
+}
+
 .steps li {
   margin-bottom: 7px;
 }
