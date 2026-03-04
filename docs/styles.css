@@ -266,6 +266,11 @@ input[type="search"]:focus {
   border-radius: 8px;
 }
 
+.screenshot-box img.executive-fit {
+  max-width: 96%;
+  max-height: 96%;
+}
+
 .notes-line {
   margin: 14px 0 0;
   color: var(--muted);
