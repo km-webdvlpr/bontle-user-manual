@@ -127,6 +127,36 @@ body {
   font-size: 0.95rem;
 }
 
+.hero-actions {
+  margin: 10px 0 10px;
+}
+
+.primary-btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #1a0a12;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 14px;
+}
+
+.primary-btn:hover,
+.primary-btn:focus-visible {
+  filter: brightness(1.05);
+  outline: none;
+}
+
+.tryout-line {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.tryout-line a {
+  color: var(--accent);
+}
+
 .search-row {
   margin: 14px 0 18px;
 }
@@ -144,22 +174,6 @@ input[type="search"] {
 input[type="search"]:focus {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
-}
-
-.callout {
-  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
-  background: linear-gradient(140deg, rgba(255, 61, 127, 0.12), rgba(255, 61, 127, 0.04));
-  border-radius: 14px;
-  padding: 16px;
-}
-
-.callout h2 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
-}
-
-.callout p {
-  margin: 0;
 }
 
 .quick-links {
@@ -271,12 +285,6 @@ input[type="search"]:focus {
   display: block;
 }
 
-.notes-line {
-  margin: 14px 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
 .footer {
   text-align: center;
   color: var(--muted);
@@ -339,6 +347,11 @@ input[type="search"]:focus {
     position: static;
     justify-content: flex-end;
     margin-bottom: 14px;
+  }
+
+  .primary-btn {
+    width: 100%;
+    text-align: center;
   }
 
   .section-body {
