@@ -12,14 +12,16 @@
   <aside id="sidebar" class="sidebar" aria-label="Section navigation">
     <div class="sidebar-header">Manual Sections</div>
     <nav>
+      <a href="#role-entry">Choose Role</a>
       <a href="#customer-booking">Customer (Booking)</a>
       <a href="#customer-manage-booking">Customer (Manage Booking)</a>
-      <a href="#login-guide">Login Guide</a>
       <a href="#consultant">Consultant</a>
       <a href="#store-manager">Store Manager</a>
       <a href="#area-manager">Area Manager</a>
       <a href="#executive-national-focus">Executive (National Focus)</a>
       <a href="#exports-exec">Exports (Exec)</a>
+      <a href="#shared-support">Shared Support</a>
+      <a href="#login-guide">Login Guide</a>
       <a href="#troubleshooting-demo">Troubleshooting (Demo)</a>
     </nav>
   </aside>
@@ -31,34 +33,88 @@
         <img class="hero-logo asco-logo" src="assets/logo-asco.svg" alt="ASCO logo" />
         <img class="hero-logo benefit-logo" src="assets/logo-benefit.svg" alt="Benefit logo" />
       </div>
-      <h1>Bontle for Benefit - User Manual</h1>
-      <p class="subtitle">Booking, Operations &amp; Reporting - quick reference</p>
-      <p class="last-updated">Last updated: March 4, 2026</p>
+      <div class="hero-text">
+        <p class="eyebrow">Operational guide</p>
+        <h1>Bontle for Benefit - User Manual</h1>
+        <p class="subtitle">Booking, operations and reporting guidance designed for fast role-based access.</p>
+        <p class="last-updated">Last updated: April 5, 2026</p>
+      </div>
       <div class="hero-actions">
         <a class="primary-btn" href="https://bontle-web-app.onrender.com/" target="_blank" rel="noopener noreferrer">Open Web Application</a>
       </div>
-      <p class="tryout-line">After reviewing this guide, try the web application here: <a href="https://bontle-web-app.onrender.com/" target="_blank" rel="noopener noreferrer">https://bontle-web-app.onrender.com/</a></p>
+      <p class="tryout-line">After reviewing this guide, open the live application here: <a href="https://bontle-web-app.onrender.com/" target="_blank" rel="noopener noreferrer">https://bontle-web-app.onrender.com/</a></p>
       <div class="search-row">
-        <input id="searchInput" type="search" placeholder="Search sections or steps..." aria-label="Search steps and sections" />
+        <input id="searchInput" type="search" placeholder="Search roles, sections or steps..." aria-label="Search steps and sections" />
+      </div>
+      <div class="hero-summary">
+        <div class="summary-card">
+          <span class="summary-label">How to use this manual</span>
+          <p>Choose a role first, use the quick actions in that section, then open support only when you need login help or troubleshooting.</p>
+        </div>
+        <div class="summary-card summary-card-accent">
+          <span class="summary-label">Best for mid-shift use</span>
+          <p>The consultant area now includes a quick decision helper for the most common booking action choices.</p>
+        </div>
       </div>
     </header>
 
-    <section class="quick-links" aria-label="Quick links">
+    <section id="role-entry" class="role-entry">
+      <div class="section-intro">
+        <p class="kicker">1. Choose role</p>
+        <h2>Start with the role you are performing right now</h2>
+        <p>Selecting a role highlights the relevant workflow, jumps you to it, and keeps the rest of the manual available in a quieter state. Choose <strong>View full manual</strong> any time to return to the full page.</p>
+      </div>
+      <div class="role-selector" role="group" aria-label="Role selector">
+        <button class="role-chip active" type="button" data-role="all">View full manual</button>
+        <button class="role-chip" type="button" data-role="customer">Customer</button>
+        <button class="role-chip" type="button" data-role="consultant">Consultant</button>
+        <button class="role-chip" type="button" data-role="store-manager">Store Manager</button>
+        <button class="role-chip" type="button" data-role="area-manager">Area Manager</button>
+        <button class="role-chip" type="button" data-role="executive">Executive</button>
+      </div>
+      <div class="role-feedback">
+        <p id="roleFeedback" class="role-feedback-text">Showing the full manual. Use role selection to narrow the view and jump to the most relevant workflow.</p>
+      </div>
+    </section>
+
+    <section class="quick-links quick-links-top" aria-label="Quick links">
       <a class="tile" href="#customer-booking">Customer (Booking)</a>
       <a class="tile" href="#customer-manage-booking">Customer (Manage Booking)</a>
-      <a class="tile" href="#login-guide">Login Guide</a>
       <a class="tile" href="#consultant">Consultant</a>
       <a class="tile" href="#store-manager">Store Manager</a>
       <a class="tile" href="#area-manager">Area Manager</a>
       <a class="tile" href="#executive-national-focus">Executive (National Focus)</a>
-      <a class="tile" href="#exports-exec">Exports (Exec)</a>
-      <a class="tile" href="#troubleshooting-demo">Troubleshooting (Demo)</a>
+      <a class="tile tile-muted" href="#shared-support">Shared Support</a>
     </section>
 
-    <section id="customer-booking" class="manual-section" data-search="customer booking open the booking page choose province city and store choose your services choose date and time keep best available consultant or pick one enter your details and tick consent click confirm booking save your booking code from the confirmation screen email">
+    <div id="sectionProgress" class="section-progress" aria-live="polite">
+      <span class="progress-label">Current section</span>
+      <strong id="sectionProgressText">Choose Role</strong>
+    </div>
+
+    <section id="customer-booking" class="manual-section" data-role-group="customer" data-search="customer booking open the booking page choose province city and store choose your services choose date and time keep best available consultant or pick one enter your details and tick consent click confirm booking save your booking code from the confirmation screen email">
       <div class="section-header">
-        <h2>Customer (Booking)</h2>
-        <button class="copy-btn" data-copy-target="customer-booking">Copy section</button>
+        <div>
+          <p class="section-tag">Customer</p>
+          <h2>Customer (Booking)</h2>
+        </div>
+      </div>
+      <div class="glance-card">
+        <h3>At a glance</h3>
+        <div class="glance-grid">
+          <article>
+            <span class="glance-label">Primary task</span>
+            <p>Make a new booking quickly and keep the booking code for later changes.</p>
+          </article>
+          <article>
+            <span class="glance-label">Key actions</span>
+            <p>Choose store, service, date and consultant, then confirm the booking.</p>
+          </article>
+          <article>
+            <span class="glance-label">Important note</span>
+            <p>Save the booking code from the confirmation screen or email before leaving the page.</p>
+          </article>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -79,10 +135,29 @@
       </div>
     </section>
 
-    <section id="customer-manage-booking" class="manual-section" data-search="customer manage booking open booking page click change manage a booking enter booking code and email choose reschedule or cancel confirm the action">
+    <section id="customer-manage-booking" class="manual-section" data-role-group="customer" data-search="customer manage booking open booking page click change manage a booking enter booking code and email choose reschedule or cancel confirm the action">
       <div class="section-header">
-        <h2>Customer (Manage Booking)</h2>
-        <button class="copy-btn" data-copy-target="customer-manage-booking">Copy section</button>
+        <div>
+          <p class="section-tag">Customer</p>
+          <h2>Customer (Manage Booking)</h2>
+        </div>
+      </div>
+      <div class="glance-card">
+        <h3>At a glance</h3>
+        <div class="glance-grid">
+          <article>
+            <span class="glance-label">Primary task</span>
+            <p>Change or cancel an existing booking using the saved booking code and email address.</p>
+          </article>
+          <article>
+            <span class="glance-label">Common actions</span>
+            <p>Reschedule when a new time is needed, or cancel when the booking can no longer go ahead.</p>
+          </article>
+          <article>
+            <span class="glance-label">Important note</span>
+            <p>The booking code and email must match the original booking details.</p>
+          </article>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -100,10 +175,29 @@
       </div>
     </section>
 
-    <section id="login-guide" class="manual-section" data-search="login guide open web application click login in top navigation select your profile or consultant username enter username and password click sign in for consultant demo use username nolly and password nolly 2026">
+    <section id="login-guide" class="manual-section support-section" data-role-group="support" data-search="login guide open web application click login in top navigation select your profile or consultant username enter username and password click sign in for consultant demo use username nolly and password nolly 2026">
       <div class="section-header">
-        <h2>Login Guide</h2>
-        <button class="copy-btn" data-copy-target="login-guide">Copy section</button>
+        <div>
+          <p class="section-tag">Shared Support</p>
+          <h2>Login Guide</h2>
+        </div>
+      </div>
+      <div class="glance-card">
+        <h3>At a glance</h3>
+        <div class="glance-grid">
+          <article>
+            <span class="glance-label">Use when</span>
+            <p>You need to get into the application before continuing with any role-based workflow.</p>
+          </article>
+          <article>
+            <span class="glance-label">Remember</span>
+            <p>Use the correct username and password combination, not only a display name.</p>
+          </article>
+          <article>
+            <span class="glance-label">Best next step</span>
+            <p>After login, return to your role section for the operational steps that follow.</p>
+          </article>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -121,10 +215,59 @@
       </div>
     </section>
 
-    <section id="consultant" class="manual-section" data-search="consultant go to login enter your username and password open consultant page use tabs today upcoming logs update booking status in order confirmed checked-in in service completed use quick actions if needed reassign request reschedule cancel no-show use refresh after major updates">
+    <section id="consultant" class="manual-section" data-role-group="consultant" data-search="consultant go to login enter your username and password open consultant page use tabs today upcoming logs update booking status in order confirmed checked-in in service completed use quick actions if needed reassign request reschedule cancel no-show use refresh after major updates">
       <div class="section-header">
-        <h2>Consultant</h2>
-        <button class="copy-btn" data-copy-target="consultant">Copy section</button>
+        <div>
+          <p class="section-tag">Consultant</p>
+          <h2>Consultant</h2>
+        </div>
+      </div>
+      <div class="glance-card glance-card-strong">
+        <h3>At a glance</h3>
+        <div class="glance-grid">
+          <article>
+            <span class="glance-label">Status flow</span>
+            <p>Confirmed -&gt; Checked-in -&gt; In service -&gt; Completed</p>
+          </article>
+          <article>
+            <span class="glance-label">Quick actions</span>
+            <p>Reschedule, cancel, request reassignment, reassign now, or mark no-show.</p>
+          </article>
+          <article>
+            <span class="glance-label">Refresh reminder</span>
+            <p>Use Refresh after major updates so the queue reflects the latest operational state.</p>
+          </article>
+        </div>
+      </div>
+      <div class="decision-helper" aria-labelledby="consultant-helper-title">
+        <div class="decision-helper-header">
+          <div>
+            <p class="kicker">Quick operational helper</p>
+            <h3 id="consultant-helper-title">Which booking action should I use?</h3>
+          </div>
+          <p class="decision-helper-note">Rule-based guide for live shift decisions.</p>
+        </div>
+        <div class="decision-options" role="group" aria-label="Consultant decision helper">
+          <button class="decision-option active" type="button" data-decision="reschedule">Need a new time</button>
+          <button class="decision-option" type="button" data-decision="cancel">Booking cannot continue</button>
+          <button class="decision-option" type="button" data-decision="request">Need manager help</button>
+          <button class="decision-option" type="button" data-decision="reassign">Need immediate handover</button>
+          <button class="decision-option" type="button" data-decision="no-show">Customer did not arrive</button>
+        </div>
+        <div class="decision-output">
+          <div class="decision-panel">
+            <span class="decision-label">Recommended action</span>
+            <strong id="decisionAction">Reschedule</strong>
+          </div>
+          <div class="decision-panel">
+            <span class="decision-label">What happens next</span>
+            <p id="decisionNext">Select a new available slot, move the booking, release the old slot, and the customer receives an updated booking email.</p>
+          </div>
+          <div class="decision-panel">
+            <span class="decision-label">Operational note</span>
+            <p id="decisionNote">Use this when the customer or store needs the same booking moved to a different time.</p>
+          </div>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -282,10 +425,29 @@
       </div>
     </section>
 
-    <section id="store-manager" class="manual-section" data-search="store manager log in as store manager open ops bookings view filter by date status consultant monitor todays queue for your store reassign bookings if needed check no-show cancel trends in view escalate cross-store issues to area manager">
+    <section id="store-manager" class="manual-section" data-role-group="store-manager" data-search="store manager log in as store manager open ops bookings view filter by date status consultant monitor todays queue for your store reassign bookings if needed check no-show cancel trends in view escalate cross-store issues to area manager">
       <div class="section-header">
-        <h2>Store Manager</h2>
-        <button class="copy-btn" data-copy-target="store-manager">Copy section</button>
+        <div>
+          <p class="section-tag">Store Manager</p>
+          <h2>Store Manager</h2>
+        </div>
+      </div>
+      <div class="glance-card">
+        <h3>Common actions</h3>
+        <div class="glance-grid">
+          <article>
+            <span class="glance-label">Monitor queue</span>
+            <p>Track today's flow by date, status and consultant so the store queue stays balanced.</p>
+          </article>
+          <article>
+            <span class="glance-label">Reassign work</span>
+            <p>Move bookings when consultants are unavailable or a better operational fit is needed.</p>
+          </article>
+          <article>
+            <span class="glance-label">Escalate</span>
+            <p>Push cross-store pressure or unresolved bottlenecks to the area manager when local action is not enough.</p>
+          </article>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -305,10 +467,29 @@
       </div>
     </section>
 
-    <section id="area-manager" class="manual-section" data-search="area manager log in as area manager open ops filters select any pilot store all 4 are in scope monitor today in progress completed use filters for status store consultant date reassign when consultants are unavailable track service flow and queue bottlenecks">
+    <section id="area-manager" class="manual-section" data-role-group="area-manager" data-search="area manager log in as area manager open ops filters select any pilot store all 4 are in scope monitor today in progress completed use filters for status store consultant date reassign when consultants are unavailable track service flow and queue bottlenecks">
       <div class="section-header">
-        <h2>Area Manager</h2>
-        <button class="copy-btn" data-copy-target="area-manager">Copy section</button>
+        <div>
+          <p class="section-tag">Area Manager</p>
+          <h2>Area Manager</h2>
+        </div>
+      </div>
+      <div class="glance-card">
+        <h3>Common actions</h3>
+        <div class="glance-grid">
+          <article>
+            <span class="glance-label">Cross-store visibility</span>
+            <p>Review pilot stores in one view to understand regional flow and service coverage.</p>
+          </article>
+          <article>
+            <span class="glance-label">Bottlenecks</span>
+            <p>Use status, store, consultant and date filters to spot delays or weak service flow early.</p>
+          </article>
+          <article>
+            <span class="glance-label">Reassignments</span>
+            <p>Move work when consultant availability changes or one store needs support from another.</p>
+          </article>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -328,10 +509,29 @@
       </div>
     </section>
 
-    <section id="executive-national-focus" class="manual-section" data-search="executive national focus log in as exec open analytics exec dashboards review daily trends store summaries consultant summaries kpi snapshot focus on throughput no-show rate completion rate cancellations use exports for reporting">
+    <section id="executive-national-focus" class="manual-section" data-role-group="executive" data-search="executive national focus log in as exec open analytics exec dashboards review daily trends store summaries consultant summaries kpi snapshot focus on throughput no-show rate completion rate cancellations use exports for reporting">
       <div class="section-header">
-        <h2>Executive (National Focus)</h2>
-        <button class="copy-btn" data-copy-target="executive-national-focus">Copy section</button>
+        <div>
+          <p class="section-tag">Executive</p>
+          <h2>Executive (National Focus)</h2>
+        </div>
+      </div>
+      <div class="glance-card">
+        <h3>Common actions</h3>
+        <div class="glance-grid">
+          <article>
+            <span class="glance-label">KPI review</span>
+            <p>Open executive dashboards to review the KPI snapshot and top national performance signals.</p>
+          </article>
+          <article>
+            <span class="glance-label">Trend focus</span>
+            <p>Compare throughput, no-show rate, completion rate and cancellations over time.</p>
+          </article>
+          <article>
+            <span class="glance-label">Exports</span>
+            <p>Use the export workflow below when leadership or operations needs a CSV dataset for reporting.</p>
+          </article>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -361,10 +561,12 @@
       </div>
     </section>
 
-    <section id="exports-exec" class="manual-section" data-search="exports exec log in as exec open export page set date range apply store consultant filters if needed export bookings dataset share csv with leadership ops">
+    <section id="exports-exec" class="manual-section" data-role-group="executive" data-search="exports exec log in as exec open export page set date range apply store consultant filters if needed export bookings dataset share csv with leadership ops">
       <div class="section-header">
-        <h2>Exports (Exec)</h2>
-        <button class="copy-btn" data-copy-target="exports-exec">Copy section</button>
+        <div>
+          <p class="section-tag">Executive</p>
+          <h2>Exports (Exec)</h2>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -383,10 +585,12 @@
       </div>
     </section>
 
-    <section id="troubleshooting-demo" class="manual-section" data-search="troubleshooting demo no slots change date or service combination wrong login use username password not display name missing booking click refresh cold start delay wait then retry once time checks all booking times should display in rsa sast">
+    <section id="troubleshooting-demo" class="manual-section support-section" data-role-group="support" data-search="troubleshooting demo no slots change date or service combination wrong login use username password not display name missing booking click refresh cold start delay wait then retry once time checks all booking times should display in rsa sast">
       <div class="section-header">
-        <h2>Troubleshooting (Demo)</h2>
-        <button class="copy-btn" data-copy-target="troubleshooting-demo">Copy section</button>
+        <div>
+          <p class="section-tag">Shared Support</p>
+          <h2>Troubleshooting (Demo)</h2>
+        </div>
       </div>
       <div class="section-body">
         <div class="steps">
@@ -402,6 +606,32 @@
           <img src="pictures/troubleshoot.png" alt="Troubleshooting screen" />
         </aside>
       </div>
+    </section>
+
+    <section id="shared-support" class="support-zone" aria-labelledby="support-heading">
+      <div class="section-intro">
+        <p class="kicker">3. Troubleshooting and support</p>
+        <h2 id="support-heading">Shared help used across roles</h2>
+        <p>Login guidance stays available to all roles, and troubleshooting sits lower in the experience so core workflows remain the first focus.</p>
+      </div>
+      <details id="troubleshootingWrapper" class="support-accordion" open>
+        <summary>Troubleshooting (Demo)</summary>
+      </details>
+      <section class="manual-section support-placeholder">
+        <div class="section-header">
+          <div>
+            <p class="section-tag">Future Option</p>
+            <h2>Ask the Manual</h2>
+          </div>
+        </div>
+        <div class="placeholder-card" aria-hidden="true">
+          <div>
+            <strong>Coming later</strong>
+            <p>A future on-page helper could point people to the right section faster. This pass keeps the experience static and manual-first.</p>
+          </div>
+          <button class="placeholder-btn" type="button" disabled>Ask the manual</button>
+        </div>
+      </section>
     </section>
 
     <footer class="footer">For your Benefit - user manual</footer>
